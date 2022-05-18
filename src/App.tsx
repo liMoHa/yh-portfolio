@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import About from "./components/About";
+import About from "./components/About/Index";
 import Home from "./components/Home";
 import MenuBar from "./components/MenuBar";
 import { GlobalStyle } from "./styles/global-style";
@@ -23,6 +23,7 @@ const App: React.FC = (): JSX.Element => {
         <MenuBar />
         <MainBox>
           <Home />
+          <About />
         </MainBox>
       </Container>
     </>
