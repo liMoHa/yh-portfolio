@@ -7,6 +7,10 @@ export const GlobalStyle = createGlobalStyle`
       box-sizing: border-box;
   }
 
+  li{
+    list-style: none;
+  }
+
   body{
     font-family: "Noto Sans KR", sans-serif;
   }
@@ -26,7 +30,8 @@ export const GlobalStyle = createGlobalStyle`
   h2{
     font-weight: 900;
     font-size: 2.5em;
-    margin: 1em;
+    margin-top: 1em;
+    margin-bottom: 0.2em
   }
 
   h3{
@@ -41,6 +46,7 @@ export const GlobalStyle = createGlobalStyle`
   };
 
   p{
+    padding: 1em;
     font-weight: 400;
     font-size: 1.2em;
   }

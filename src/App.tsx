@@ -3,6 +3,7 @@ import styled from "styled-components";
 import About from "./components/About/Index";
 import Home from "./components/Home";
 import MenuBar from "./components/MenuBar";
+import Skills from "./components/Skills/Index";
 import { GlobalStyle } from "./styles/global-style";
 
 const Container = styled.div`
@@ -24,6 +25,7 @@ const App: React.FC = (): JSX.Element => {
         <MainBox>
           <Home />
           <About />
+          <Skills />
         </MainBox>
       </Container>
     </>

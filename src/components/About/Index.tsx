@@ -2,12 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import Info from "./Info";
 
-const AboutBox = styled.div`
+const AboutBox = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding-bottom:1.2em;
+  padding-bottom: 1.2em;
   background-color: ${({ theme }) => theme.colors.white};
 `;
 
@@ -29,7 +29,7 @@ const info = [
   {
     iconName: "fa-solid fa-graduation-cap",
     category: "학력",
-    content: '한림대학교\n(빅데이터학과)',
+    content: "한림대학교\n(빅데이터학과)",
   },
 
   {
