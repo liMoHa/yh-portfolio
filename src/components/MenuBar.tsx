@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Container = styled.ul`
   position: sticky;
-  top:0;
+  top: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -24,8 +24,7 @@ const Menu = styled.li`
   &.active {
     color: ${({ theme }) => theme.colors.pinkBrown};
   }
-  &:hover{
-    
+  &:hover {
     color: ${({ theme }) => theme.colors.pinkBrown};
   }
 `;
