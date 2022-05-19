@@ -11,7 +11,7 @@ const AboutBox = styled.section`
   background-color: ${({ theme }) => theme.colors.white};
 `;
 
-const Intro = styled.p`
+const Intro = styled.h3`
   width: 80%;
 `;
 
@@ -49,9 +49,9 @@ const About: React.FC = (): JSX.Element => {
     <AboutBox>
       <h2>About me</h2>
       <Intro>
-        안녕하세요. 노력, 꾸준함을 가장 좋아하는 임영하입니다. 새로운 기술을
-        익히고 소스를 작성해보며 점차 익숙해지는 과정을 즐기며, 강한 책임감과
-        하고자 마음 먹은 것은 반드시 해내는 것이 저의 장점입니다. 현재는 단순히
+        안녕하세요. 자기개발에 진심인 프론트엔드 개발자입니다. 새로운 기술을
+        익히고 소스를 작성해보며 점차 익숙해지는 과정을 즐기며, 책임감 있는
+        성격과 마음 먹은 것은 반드시 해내는 것이 저의 장점입니다. 현재는 단순히
         기능 구현하는 것에 만족하지 않고 좋은 소스를 작성하는 방법과 올바른 협업
         방식 및 의사소통 방법에 관심을 가지고 공부하고 있습니다.
       </Intro>

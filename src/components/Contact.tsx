@@ -53,7 +53,7 @@ const Contact: React.FC = (): JSX.Element => (
         <h3>yeongha6382@gmail.com</h3>
       </Info>
     </InfoBox>
-    <h4>© 2021. 임영하. All rights reserved.</h4>
+    <h4>© 2022. 임영하. All rights reserved.</h4>
   </ContactBox>
 );
 
