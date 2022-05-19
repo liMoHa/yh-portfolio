@@ -11,6 +11,7 @@ declare module "styled-components" {
       lightGreen: string;
       beige: string;
       lightBeige: string;
+      pink: string;
     };
   }
 }

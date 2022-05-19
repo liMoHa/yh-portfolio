@@ -13,6 +13,7 @@ const theme: DefaultTheme = {
     lightGreen: "#93aa91",
     beige: "#eeebea",
     lightBeige: "#f3f1f1",
+    pink: "#f46868",
   },
 };
 
