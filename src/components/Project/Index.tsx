@@ -16,7 +16,7 @@ const ProjectBox = styled.section`
 
 const ProjectBoard = styled.div`
   text-align: center;
-  background-color: ${({ theme }) => theme.colors.lightBeige};
+  background-color: ${({ theme }) => theme.colors.white};
   border-radius: 1.2em;
   box-shadow: 2px 2px 2px gray;
   width: 95%;
