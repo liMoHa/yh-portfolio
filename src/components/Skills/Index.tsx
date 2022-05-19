@@ -9,7 +9,9 @@ const SkillsBox = styled.section`
   padding-bottom: 2em;
   background-color: ${({ theme }) => theme.colors.lightBeige};
   & h2 {
-    margin-bottom: 1.5em;
+    margin-bottom: 1em;
+    padding-bottom: 0.4em;
+    border-bottom: 1px solid ${({ theme }) => theme.colors.darkBrown};
   }
   & > h3 {
     font-size: 1.5em;

@@ -9,6 +9,11 @@ const AboutBox = styled.section`
   text-align: center;
   padding-bottom: 1.2em;
   background-color: ${({ theme }) => theme.colors.white};
+  & h2 {
+    padding-bottom: 0.4em;
+    margin-bottom: 0.8em;
+    border-bottom: 1px solid ${({ theme }) => theme.colors.darkBrown};
+  }
 `;
 
 const Intro = styled.h3`
@@ -50,8 +55,7 @@ const About: React.FC = (): JSX.Element => {
       <h2>About me</h2>
       <Intro>
         안녕하세요. 자기개발에 진심인 프론트엔드 개발자입니다. 새로운 기술을
-        익히고 소스를 작성해보며 점차 익숙해지는 과정을 즐기며, 책임감 있는
-        성격과 마음 먹은 것은 반드시 해내는 것이 저의 장점입니다. 현재는 단순히
+        익히고 소스를 작성해보며 점차 익숙해지는 과정을 즐기며, 책임감 있는 성격과 마음 먹은 것은 반드시 해내는 것이 저의 장점입니다. 현재는 단순히
         기능 구현하는 것에 만족하지 않고 좋은 소스를 작성하는 방법과 올바른 협업
         방식 및 의사소통 방법에 관심을 가지고 공부하고 있습니다.
       </Intro>
