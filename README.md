@@ -1,47 +1,16 @@
-# Getting Started with Create React App
+# 임영하 포트폴리오 사이트
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+##  React, TypeScript, styled-components를 이용하여 만든 포트폴리오 웹사이트입니다. 
+### - 데스크탑, 테블릿, 모바일 크기별로 반응하도록 만들었습니다.
+### - styled-components를 이용하여 글로벌 스타일을 지정하였고 자주 사용되거나 메인컬러가 되는 속성값들을 따로 관리하는 테마 파일을 만들었습니다. nesting 구조를 이용하여 class이름을 크게 고려하지 않고 빠르게 작성할 수 있었습니다.
+### - TypeScript를 사용한 덕분에 어떤 값이 전달될지 의식해서 소스를 작성할 수 있었고, 타입이 불일치 하는 경우 자바스크립트와는 달리 런타임 전에 오류를 알 수 있기 때문에 실행 시 reference 오류를 겪지 않았습니다.
+<br>
 
-## Available Scripts
+# 결과물
+<img style="width: 60rem; margin-bottom:3em" src="public/images/portfolioGithubImg.png">
 
-In the project directory, you can run:
 
-### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-# my-portfolio
+# 느낌점
+### - ovserver intersection API를 적용하여 스크롤시 조건을 만족하는 영역에 해당하는 메뉴를 활성화시키려고 하였음. 로컬 url에선 잘 동작하지만 배포 후 생성된 링크를 통한 웹사이트에서는 잘 동작하지 않았음. 
+### - DOM을 조작하는 방식으로 useRef를 사용하는 것과 querySelector등으로 객체를 가져오는 것 중 어떤 상황에서 어떤 것이 더 유리한지 고민해볼 필요성을 느낌.
