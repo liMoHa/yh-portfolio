@@ -84,7 +84,7 @@ const Skills = () => {
     <SkillsBox data-id="Skills">
       <h2>Skills</h2>
       <h3>- my tech stack -</h3>
-      <StackInfoBox>
+      <StackInfoBox className="stackInfoBox">
         {stackInfo.map((info) => (
           <Skill
             key={info.path}

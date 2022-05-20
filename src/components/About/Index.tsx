@@ -59,7 +59,7 @@ const About: React.FC = (): JSX.Element => {
         기능 구현하는 것에 만족하지 않고 좋은 소스를 작성하는 방법과 올바른 협업
         방식 및 의사소통 방법에 관심을 가지고 공부하고 있습니다.
       </Intro>
-      <InfoBoxContainer>
+      <InfoBoxContainer className="info-box-container">
         {info.map((info) => (
           <Info
             key={info.iconName}

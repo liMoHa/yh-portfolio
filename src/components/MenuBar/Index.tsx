@@ -1,6 +1,15 @@
-import React from "react";
+import React, { useRef } from "react";
 import styled from "styled-components";
 import { scrollIntoView } from "../../utils/scrollIntoView";
+
+const ToggleButton = styled.button`
+  color: ${({ theme }) => theme.colors.white};
+  position: fixed;
+  top: 0.5em;
+  right: 0.5em;
+  font-size: 2em;
+  display: none;
+`;
 
 const Container = styled.ul`
   position: sticky;
@@ -32,20 +41,32 @@ const Menu = styled.li`
 `;
 
 const MenuBar: React.FC = (): JSX.Element => {
+  const buttonRef = useRef<HTMLButtonElement>(null);
+
   const onClickMenu = (e: React.MouseEvent<HTMLElement>) => {
     const target = e.target as HTMLElement;
     scrollIntoView(target);
+    buttonRef.current?.classList.toggle('clicked');
+  };
+
+  const onClickButton = () => {
+    buttonRef.current?.classList.toggle("clicked");
   };
   return (
-    <Container onClick={onClickMenu}>
-      <Menu className="active" id="Home">
-        {"<Home>"}
-      </Menu>
-      <Menu id="About">{"<About />"}</Menu>
-      <Menu id="Skills">{"<Skills />"}</Menu>
-      <Menu id="Project">{"<Project />"}</Menu>
-      <Menu id="Contact">{"<Contact />"}</Menu>
-    </Container>
+    <>
+      <ToggleButton ref={buttonRef} onClick={onClickButton}>
+        <i className="fa-solid fa-bars" />
+      </ToggleButton>
+      <Container onClick={onClickMenu}>
+        <Menu className="active" id="Home">
+          {"<Home>"}
+        </Menu>
+        <Menu id="About">{"<About />"}</Menu>
+        <Menu id="Skills">{"<Skills />"}</Menu>
+        <Menu id="Project">{"<Project />"}</Menu>
+        <Menu id="Contact">{"<Contact />"}</Menu>
+      </Container>
+    </>
   );
 };
 

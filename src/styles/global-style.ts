@@ -28,6 +28,11 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   h2{
+    @media screen and (max-width: 1024px) {
+      & {
+        padding-top: 1.2em;
+      }
+    }
     font-weight: 900;
     font-size: 2.5em;
     margin-top: 1em;

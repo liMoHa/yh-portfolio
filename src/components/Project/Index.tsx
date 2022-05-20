@@ -64,6 +64,9 @@ const DetailInfo = styled.div`
 
 const Box = styled.div`
   display: flex;
+  flex-direction: column;
+  text-align: start;
+  margin-bottom: 0.5em;
   & em {
     font-weight: bold;
   }
@@ -106,8 +109,8 @@ const Project: React.FC = (): JSX.Element => (
             <em>구현한 기능</em>
           </h3>
           <h3>
-            header UI, 데스크탑/모바일 크기 변경, 메인 영역, 초기 drag and drop 구조,
-            미리보기, 저장하기
+            header UI, 데스크탑/모바일 크기 변경, 메인 영역, 초기 drag and drop
+            구조, 미리보기, 저장하기
           </h3>
         </Box>
         <Box>
