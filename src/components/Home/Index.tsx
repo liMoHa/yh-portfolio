@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { scrollIntoView } from "../../utils/scrollIntoView";
 
 const HomeBox = styled.section`
   display: flex;
@@ -54,6 +55,10 @@ const ContactButton = styled.button`
 `;
 
 const Home: React.FC = (): JSX.Element => {
+  const onClickContactButton = (e:React.MouseEvent<HTMLButtonElement>) => {
+    const target = e.target as HTMLElement;
+    scrollIntoView(target);
+  }
   return (
     <HomeBox data-id="Home">
       <Profile src="images/profileImg.png" alt="profile" />
@@ -73,7 +78,7 @@ const Home: React.FC = (): JSX.Element => {
           <img src="images/notionToHome.svg" alt="notion" />
         </a>
       </IconBox>
-      <ContactButton>Contact me</ContactButton>
+      <ContactButton id="Contact" onClick={onClickContactButton}>Contact me</ContactButton>
     </HomeBox>
   );
 };
