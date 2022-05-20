@@ -42,7 +42,7 @@ const Info = styled.div`
   }
 `;
 const Contact: React.FC = (): JSX.Element => (
-  <ContactBox>
+  <ContactBox data-id="Contact">
     <InfoBox>
       <Info>
         <i className="fa-solid fa-phone" />

@@ -41,6 +41,9 @@ const MenuBar: React.FC = (): JSX.Element => {
     // 클릭된 요소 활성화시키기
     target.classList.add("active");
     target.textContent = `<${target.id}>`;
+    // 해당 위치로 이동
+    const curPosition = document.querySelector(`section[data-id=${target.id}]`);
+    curPosition?.scrollIntoView({behavior:'smooth'});
   };
   return (
     <Container onClick={onClickMenu}>

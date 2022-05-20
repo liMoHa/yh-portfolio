@@ -81,7 +81,7 @@ const toolsInfo = [
 
 const Skills = () => {
   return (
-    <SkillsBox>
+    <SkillsBox data-id="Skills">
       <h2>Skills</h2>
       <h3>- my tech stack -</h3>
       <StackInfoBox>

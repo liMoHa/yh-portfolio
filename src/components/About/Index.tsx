@@ -51,7 +51,7 @@ const info = [
 
 const About: React.FC = (): JSX.Element => {
   return (
-    <AboutBox>
+    <AboutBox data-id="About">
       <h2>About me</h2>
       <Intro>
         안녕하세요. 자기개발에 진심인 프론트엔드 개발자입니다. 새로운 기술을

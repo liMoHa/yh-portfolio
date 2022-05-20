@@ -70,7 +70,7 @@ const Box = styled.div`
 `;
 
 const Project: React.FC = (): JSX.Element => (
-  <ProjectBox>
+  <ProjectBox data-id="Project">
     <h2>Project</h2>
     <ProjectBoard>
       <h2>STREACT</h2>

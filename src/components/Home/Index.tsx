@@ -55,7 +55,7 @@ const ContactButton = styled.button`
 
 const Home: React.FC = (): JSX.Element => {
   return (
-    <HomeBox>
+    <HomeBox data-id="Home">
       <Profile src="images/profileImg.png" alt="profile" />
       <h1>YeongHa Im</h1>
       <h3>Frontend Developer</h3>
