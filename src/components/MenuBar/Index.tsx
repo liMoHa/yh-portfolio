@@ -7,6 +7,7 @@ const Container = styled.ul`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 12em;
   height: 100vh;
   padding: 1.5em;
   background-color: ${({ theme }) => theme.colors.darkBrown};
@@ -30,15 +31,26 @@ const Menu = styled.li`
 `;
 
 const MenuBar: React.FC = (): JSX.Element => {
+  const onClickMenu = (e: React.MouseEvent<HTMLElement>) => {
+    const target = e.target as HTMLElement;
+    if (target.nodeName !== "LI") return;
+    // 활성화되어있는 요소 가져와서 비활성화시키기
+    const activedElment = document.querySelector("li.active");
+    activedElment?.classList.remove("active");
+    activedElment!.textContent = `<${activedElment?.id} />`;
+    // 클릭된 요소 활성화시키기
+    target.classList.add("active");
+    target.textContent = `<${target.id}>`;
+  };
   return (
-    <Container>
-      <Menu className="active" id="home">
-        {"<Home />"}
+    <Container onClick={onClickMenu}>
+      <Menu className="active" id="Home">
+        {"<Home>"}
       </Menu>
-      <Menu id="about">{"<About />"}</Menu>
-      <Menu id="skills">{"<Skills />"}</Menu>
-      <Menu id="project">{"<Project />"}</Menu>
-      <Menu id="contact">{"<Contact />"}</Menu>
+      <Menu id="About">{"<About />"}</Menu>
+      <Menu id="Skills">{"<Skills />"}</Menu>
+      <Menu id="Project">{"<Project />"}</Menu>
+      <Menu id="Contact">{"<Contact />"}</Menu>
     </Container>
   );
 };
