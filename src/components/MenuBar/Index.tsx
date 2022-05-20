@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import styled from "styled-components";
+import { activeMenu } from "../../utils/activeMenu";
 import { scrollIntoView } from "../../utils/scrollIntoView";
 
 const ToggleButton = styled.button`
@@ -46,7 +47,8 @@ const MenuBar: React.FC = (): JSX.Element => {
   const onClickMenu = (e: React.MouseEvent<HTMLElement>) => {
     const target = e.target as HTMLElement;
     scrollIntoView(target);
-    buttonRef.current?.classList.toggle('clicked');
+    buttonRef.current?.classList.toggle("clicked");
+    activeMenu(target.id);
   };
 
   const onClickButton = () => {
