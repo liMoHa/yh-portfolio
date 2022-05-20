@@ -34,13 +34,6 @@ const MenuBar: React.FC = (): JSX.Element => {
   const onClickMenu = (e: React.MouseEvent<HTMLElement>) => {
     const target = e.target as HTMLElement;
     if (target.nodeName !== "LI") return;
-    // 활성화되어있는 요소 가져와서 비활성화시키기
-    const activedElment = document.querySelector("li.active");
-    activedElment?.classList.remove("active");
-    activedElment!.textContent = `<${activedElment?.id} />`;
-    // 클릭된 요소 활성화시키기
-    target.classList.add("active");
-    target.textContent = `<${target.id}>`;
     // 해당 위치로 이동
     const curPosition = document.querySelector(`section[data-id=${target.id}]`);
     curPosition?.scrollIntoView({behavior:'smooth'});
