@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { activeMenu } from "../../utils/activeMenu";
 import { scrollIntoView } from "../../utils/scrollIntoView";
 
 const HomeBox = styled.section`
@@ -58,6 +59,7 @@ const Home: React.FC = (): JSX.Element => {
   const onClickContactButton = (e:React.MouseEvent<HTMLButtonElement>) => {
     const target = e.target as HTMLElement;
     scrollIntoView(target);
+    activeMenu(target.id);
   }
   return (
     <HomeBox data-id="Home">
