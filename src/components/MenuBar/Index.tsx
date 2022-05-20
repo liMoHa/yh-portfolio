@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { scrollIntoView } from "../../utils/scrollIntoView";
 
 const Container = styled.ul`
   position: sticky;
@@ -33,10 +34,7 @@ const Menu = styled.li`
 const MenuBar: React.FC = (): JSX.Element => {
   const onClickMenu = (e: React.MouseEvent<HTMLElement>) => {
     const target = e.target as HTMLElement;
-    if (target.nodeName !== "LI") return;
-    // 해당 위치로 이동
-    const curPosition = document.querySelector(`section[data-id=${target.id}]`);
-    curPosition?.scrollIntoView({behavior:'smooth'});
+    scrollIntoView(target);
   };
   return (
     <Container onClick={onClickMenu}>
@@ -50,4 +48,5 @@ const MenuBar: React.FC = (): JSX.Element => {
     </Container>
   );
 };
+
 export default MenuBar;

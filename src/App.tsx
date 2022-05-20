@@ -7,7 +7,7 @@ import Skills from "./components/Skills/Index";
 import Project from "./components/Project/Index";
 import Contact from "./components/Contact/Index";
 import { GlobalStyle } from "./styles/global-style";
-import { getActiveElement } from "@testing-library/user-event/dist/utils";
+import { activeMenu } from "./utils/activeMenu";
 
 const Container = styled.div`
   display: flex;
@@ -19,34 +19,34 @@ const MainBox = styled.main`
   flex-direction: column;
 `;
 
+const idArr = ["Home", "About", "Skills", "Project", "Contact"];
+
+const options = {
+  root: null,
+  rootMargin: "0px",
+  threshold: 0.5,
+};
+
 const App: React.FC = (): JSX.Element => {
   useEffect(() => {
     // component다 만들어진 후 마지막에 실행
     return () => {
-      const options = {
-        root: null,
-        rootMargin: "0px",
-        threshold: 0.5,
-      };
       const boxes = document.querySelectorAll("section");
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting){
-            // 활성상태 메뉴 비활성화시키기
-            const activedElement= document.querySelector('li.active');
-            activedElement?.classList.remove("active");
-            activedElement!.textContent = `<${activedElement?.id} />`;
-            // 현재 위치 메뉴 활성화시키기
-            const id = (entry.target as HTMLElement).dataset.id;
-            const target = document.querySelector(`#${id}`);
-            target?.classList.add("active");
-            target!.textContent = `<${target?.id}>`;
+          if (!entry.isIntersecting && entry.intersectionRatio > 0) {
+            let id = (entry.target as HTMLElement).dataset.id;
+            let idx = id && idArr.indexOf(id);
+            if (entry.boundingClientRect.y < 0) {
+              if (idx === 0 || idx) activeMenu(idArr[idx + 1]);
+            } else {
+              if (idx === 0 || idx) activeMenu(idArr[idx - 1]);
+            }
           }
         });
       }, options);
       boxes.forEach((box) => observer.observe(box));
     };
-
   }, []);
   return (
     <>
