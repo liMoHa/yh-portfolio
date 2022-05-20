@@ -15,18 +15,25 @@ const Profile = styled.img`
 `;
 
 const IconBox = styled.div`
-  & svg {
-    width: 1em;
-    height: 1em;
-    font-size: 2em;
+  margin-top: 1em;
+  display: flex;
+  align-items: center;
+  & a {
+    display: inline-block;
+    text-align: center;
+    width: 3em;
+    height: 3em;
     background-color: ${({ theme }) => theme.colors.darkGreen};
     color: ${({ theme }) => theme.colors.white};
     border-radius: 100%;
-    padding: 0.25em;
+    padding: 0.5em;
     margin: 0.5em;
     transition: background-color 0.2s ease-out;
+    & svg {
+      font-size: 2em;
+    }
   }
-  & svg:hover {
+  & a:hover {
     background-color: ${({ theme }) => theme.colors.darkBrown};
   }
 `;
@@ -58,6 +65,12 @@ const Home: React.FC = (): JSX.Element => {
         </a>
         <a href="https://yeongha.tistory.com/">
           <i className="fa-brands fa-blogger-b" />
+        </a>
+        <a
+          className="notion"
+          href="https://cat-pearl-b11.notion.site/yeongha-s-study-space-14fc2ae59a4c410b9101988207dc4123"
+        >
+          <img src="images/notionToHome.svg" alt="notion" />
         </a>
       </IconBox>
       <ContactButton>Contact me</ContactButton>
